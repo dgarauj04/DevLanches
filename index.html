@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLanches - Cardápio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="sandwich"></i>
+                <h1><strong>DevLanches</strong></h1>
+            </div>
+            <button class="carrinho-btn" id="carrinhoBtn">
+                <i data-lucide="shopping-cart"></i>
+                <span class="carrinho-contador" id="carrinhoContador">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2>Os Melhores Lanches para Devs</h2>
+                <p>Fome de programar? Combata com nossos lanches deliciosos!</p>
+            </div>
+        </section>
+
+        <section class="controles-menu">
+            <div class="container">
+                <button class="categoria-btn active" data-categoria="hamburgers">Hambúrgueres</button>
+                <button class="categoria-btn" data-categoria="bebidas">Bebidas</button>
+                <button class="categoria-btn" data-categoria="salgados">Salgados</button>
+                <button class="categoria-btn" data-categoria="doces">Doces & Sobremesas</button>
+                <button class="categoria-btn" data-categoria="promocoes">Promoções</button>
+                <button class="categoria-btn" data-categoria="combos">Combos</button>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <div class="container">
+                <div id="produtosContainer" class="produtos-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrinho de Compras -->
+    <div id="carrinhoModal" class="carrinho-modal">
+        <div class="carrinho-conteudo">
+            <div class="carrinho-header">
+                <h2>Seu Carrinho</h2>
+                <button class="fechar-btn" id="fecharCarrinho">&times;</button>
+            </div>
+            <div class="carrinho-body">
+                <div id="carrinhoItens" class="carrinho-itens">
+                    <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+                </div>
+                <div class="carrinho-total">
+                    <div class="cupom-section">
+                        <input type="text" id="cupomInput" placeholder="Código do cupom">
+                        <button id="aplicarCupom">Aplicar</button>
+                    </div>
+                    <div class="total-info">
+                        <p>Subtotal: R$<span id="subtotal">0.00</span></p>
+                        <p class="desconto-text">Desconto: R$<span id="desconto">0.00</span></p>
+                        <p class="total-final">Total: R$<span id="total">0.00</span></p>
+                    </div>
+                    <button id="finalizarCompra" class="btn-comprar">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DevLanches</h3>
+                    <p>Os melhores lanches para desenvolvedores</p>
+                    <p>&copy; 2025 DevLanches. Todos os direitos reservados. Site de lanches ficticio.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Segunda a Sexta: 11h - 23h</p>
+                    <p>Sábado e Domingo: 11h - 00h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Localização</h4>
+                    <p>Rua do Código, 123</p>
+                    <p>Bairro Digital, São Paulo - SP</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/dgarauj04" target="_blank"><i data-lucide="github"></i></a>
+                        <a href="https://www.instagram.com/dgaraujoo_" target="_blank"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/douglas-araujo-dgprogdev" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://dgaraujo-dev.vercel.app" target="_blank"><i data-lucide="globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
